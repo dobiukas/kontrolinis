@@ -3,15 +3,15 @@ from .models import *
 from django.contrib.auth.forms import UserCreationForm
 
 
-class fooditemForm(ModelForm):
+class food(ModelForm):
     class Meta:
-        model = Fooditem
+        model = Food
         fields = "__all__"
 
 
-class addUserFooditem(ModelForm):
+class UserFood(ModelForm):
     class Meta:
-        model = UserFooditem
+        model = UserFood
         fields = "__all__"
 
 

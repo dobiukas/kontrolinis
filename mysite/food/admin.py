@@ -5,13 +5,16 @@ from .models import *
 
 # Register your models here.
 
-class foodAdmin(admin.ModelAdmin):
+class food(admin.ModelAdmin):
     class Meta:
-        model=Fooditem
-    list_display=['name']
-    list_filter=['name']
+        model = Food
+    list_display = ['name']
+    list_filter = ['name']
+
+
+
 
 admin.site.register(Customer)
-admin.site.register(UserFooditem)
+admin.site.register(UserFood)
 admin.site.register(Category)
-admin.site.register(Fooditem,foodAdmin)
+admin.site.register(Food, food)
